@@ -7,10 +7,10 @@ public class Server extends Thread{
     private Socket sock = null;
     private BufferedReader in = null;            //Client로부터 데이터를 읽어들이기 위한 입력스트림
 
-    public void Connection() {
+    public void Connection(int port) {
         System.out.println("Client Wait...");
         try {
-            s_sock = new ServerSocket(1115);
+            s_sock = new ServerSocket(port);
             sock = s_sock.accept();
             System.out.println("클라이언트 연결 성공");
             in = new BufferedReader(new InputStreamReader(sock.getInputStream()));
