@@ -6,7 +6,7 @@ public class Server extends Thread{
     private ServerSocket s_sock = null;
     private Socket sock = null;
     private BufferedReader in = null;            //Client로부터 데이터를 읽어들이기 위한 입력스트림
-
+    /**서버 연결*/
     public void Connection(int port) {
         System.out.println("Client Wait...");
         try {
@@ -19,7 +19,7 @@ public class Server extends Thread{
             System.out.println(e);
         }
     }
-
+    /**클라이언트로 온 메시지 출력*/
     @Override
     public void run() {
         String line = null;

@@ -33,9 +33,7 @@ public class SSLserver {
             }
         }while (!connection);
     }
-
-
-
+    /**SSL 연결*/
     public boolean SSL_Connection(String key_path, String key_password, int port){
         try{
             // KeyStore 툴을 이용해서 만든 파일 설정.
